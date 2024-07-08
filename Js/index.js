@@ -156,42 +156,44 @@ vams('.payclick').forEach((t) => {
                     vam('#payqr > img').setAttribute('style', 'display:none')
 
                     let isChecking = false;
-                    vam('#checkpay78').onclick = async () => {
-                        if (isChecking) return;
-                        isChecking = true;
-                        await fetch(`https://dss-api.s4h.edu.vn/payment/check?orderCode=${data.orderCode}`).then(res => res.json()).then(data => {
-                            console.log(data.status);
-                            if (data.status === 'PAID') {
-                                // navigation
-                                var dotlist = vams('#Box_1412c .dot')[2];
-                                var line = vams('#Box_1412c .line>p')[1];
-                                dotlist.classList.add('acc')
-                                line.setAttribute('style', 'display:block')
+                    vam('#checkpay78').onclick = () => {
+                        let interval = setInterval(async () => {
+                            if (isChecking) return;
+                            isChecking = true;
 
-                                vam("#Box_1412c .content.acc").classList.remove('acc')
-                                vam('#Box_1412c .content.pay.success').classList.add('acc');
+                            await fetch(`https://dss-api.s4h.edu.vn/payment/check?orderCode=${data.orderCode}`).then(res => res.json()).then(data => {
+                                if (data.status === 'PAID') {
+                                    // navigation
+                                    var dotlist = vams('#Box_1412c .dot')[2];
+                                    var line = vams('#Box_1412c .line>p')[1];
+                                    dotlist.classList.add('acc')
+                                    line.setAttribute('style', 'display:block')
 
-                            } else if (data.status === 'CANCELLED') {
-                                vam('.tbsuc h1').innerText = 'Thanh toán thất bại'
-                                vam('.tbsuc p').innerText = 'Đơn hàng của bạn đã bị hủy bỏ, vui lòng thử lại'
-                                let icon = vam("#icon");
-                                if (icon.classList.contains('bi-check-circle-fill')) {
-                                    icon.classList.remove('bi-check-circle-fill')
-                                    icon.classList.add('bi-exclamation-circle-fill')
+                                    vam("#Box_1412c .content.acc").classList.remove('acc')
+                                    vam('#Box_1412c .content.pay.success').classList.add('acc');
+
+                                    clearInterval(interval);
+                                } else if (data.status === 'CANCELLED') {
+                                    vam('.tbsuc h1').innerText = 'Thanh toán thất bại'
+                                    vam('.tbsuc p').innerText = 'Đơn hàng của bạn đã bị hủy bỏ, vui lòng thử lại'
+                                    if (vam('.bi-check-circle-fill') != null) {
+                                        vam('.bi-check-circle-fill').classList.remove('bi-check-circle-fill')
+                                        vam('#icon').classList.add('bi-exclamation-circle-fill')
+                                    }
+                                    vam('.tbsuc').setAttribute('style', 'transform:translateX(0)')
+                                    setTimeout(() => {
+                                        vam('.tbsuc').setAttribute('style', 'transform:translateX(200%)')
+                                    }, 3000);
+                                    vam('.bi-x').addEventListener('click', () => {
+                                        vam('.tbsuc').setAttribute('style', 'transform:translateX(200%)')
+                                    })
                                 }
-                                vam('.tbsuc').setAttribute('style', 'transform:translateX(0)')
-                                setTimeout(() => {
-                                    vam('.tbsuc').setAttribute('style', 'transform:translateX(200%)')
-                                }, 3000);
-                                vam('.bi-x').addEventListener('click', () => {
-                                    vam('.tbsuc').setAttribute('style', 'transform:translateX(200%)')
-                                })
-                            }
-                        }).catch(err => {
-                            console.log(err)
-                        })
+                            }).catch(err => {
+                                console.log(err)
+                            })
 
-                        isChecking = false;
+                            isChecking = false;
+                        }, 3000);
                     }
 
                     vam(".back").onclick = () => {
