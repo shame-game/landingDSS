@@ -187,6 +187,8 @@ vams('.payclick').forEach((t) => {
                                     vam('.bi-x').addEventListener('click', () => {
                                         vam('.tbsuc').setAttribute('style', 'transform:translateX(200%)')
                                     })
+                                } else {
+                                    console.log('hello');
                                 }
                             }).catch(err => {
                                 console.log(err)

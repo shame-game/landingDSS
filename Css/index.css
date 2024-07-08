@@ -23,6 +23,16 @@ ins {
     text-decoration: none;
 }
 
+#checkpay78 {
+    background-color: var(--color-home);
+    border: none;
+    border-radius: 6px;
+    padding: 3px 10px;
+    font-size: 1em;
+    margin: 5px 0;
+    color: white;
+}
+
 .fa {
     color: red;
 }
