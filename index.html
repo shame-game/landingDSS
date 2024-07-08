@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://dsseducation.com/wp-content/uploads/2023/12/cropped-Logo_DSS_GROUP-1-1-192x192.png"
+        sizes="192x192">
+    <link rel="icon" href="https://dsseducation.com/wp-content/uploads/2023/12/cropped-Logo_DSS_GROUP-1-1-32x32.png"
+        sizes="32x32">
+    <!-- Title & ico img -->
+    <title>Template</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/fontawesome/4.7.0/css/font-awesome.min.css?ver=4.7.0">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- Slick -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <!-- Css style -->
+    <link rel="stylesheet" href="Css/loadweb.css">
+    <link rel="stylesheet" href="Css/index.css">
+    <link rel="stylesheet" href="Css/popup.css">
+
+</head>
+
+<body>
+    <section id="section" class="active" style="display: none;">
+        <span class="overlay"></span>
+        <div class="modal-box">
+            <i class="bi bi-check-circle-fill"></i>
+            <h2>Đăng ký thành công</h2>
+            <h3>Thông tin tài khoản đăng nhập đã được gửi đến email của bạn!</h3>
+            <div class="buttons">
+                <button class="close-btn button206">Xong</button>
+                <a class="button206" target="_blank" href="https://tr1nh-demo.web.app/">Đăng nhập học thử ngay</a>
+            </div>
+        </div>
+    </section>
+    <!--
+    <div id="popup206">
+        <div id="popup206_main">
+            <h1>Đăng ký thành công</h1>
+            <p>Thông tin tài khoản đăng nhập đã được gửi đến email của bạn</p>
+        </div>
+        <div id="popup206_background"></div>
+    </div>-->
+    <div class="popup_khoahoc">
+        <div class="background_popup" style="display: none;"></div>
+        <div class="popupmain" style="display: none;">
+            <div style="display: flex;">
+                <div class="intropopup" style="flex: 1;">
+                    <h1 style="font-size: 2.5rem;font-weight: 600;">
+                        Đăng ký tư vấn lộ trình học
+                    </h1>
+                    <p style="font-size: 1.2rem;padding: 10px 0;">Bạn hãy để lại thông tin, IELTS Hacker sẽ liên hệ tư
+                        vấn
+                        cho mình sớm
+                        nha!</p>
+                    <img src="./photo/Thiết kế chưa có tên (5).png" alt="">
+                </div>
+                <div class="formpopup" style="flex: 1.3;display: flex;
+                flex-direction: column;
+                justify-content: space-between;">
+                    <h1>Tên đầy đủ <span style="color: red;">*</span></h1>
+                    <input class="popupforms" type="text" name="name" placeholder="Nhập họ và tên của bạn">
+                    <h1>Số điện thoại <span style="color: red;">*</span></h1>
+                    <input class="popupforms" type="text" name="phone" placeholder="Nhập số điện thoại của bạn">
+                    <h1>Email</h1>
+                    <input class="popupforms" type="email" name="email" placeholder="Nhập Email của bạn">
+                    <h1>Lựa chọn khóa học tư vấn</h1>
+                    <fieldset id="fieldset" style="margin: 10px 0;"></fieldset>
+                    <input class="btn btn-vam" id="popuptuvan" type="submit" value="Gửi thông tin đăng ký">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="loadweb">
+        <div></div>
+    </div>
+    <div class="tbsuc">
+        <div>
+            <i id="icon" class="bi bi-check-circle-fill"></i>
+            <div>
+                <h1>Thành công</h1>
+                <p>Bạn đã đăng ký thông tin thành công!</p>
+            </div>
+            <i class="bi bi-x"></i>
+        </div>
+    </div>
+    <div class="dangky"><a href="#dk">Đăng ký ngay</a></div>
+    <div id="Box_1412c">
+        <div class="background" style="display: none;"></div>
+        <div class="box container" style="display: none;">
+            <div>
+                <div class="dots">
+                    <div class="dot d1">
+                        <p>1</p>
+                    </div>
+                    <span class="line" style="background-color: rgb(169, 169, 169);">
+                        <p></p>
+                    </span>
+                    <div class="dot d2">
+                        <p>2</p>
+                    </div>
+                    <span class="line" style="background-color: rgb(169, 169, 169);">
+                        <p></p>
+                    </span>
+                    <div class="dot d3">
+                        <p>3</p>
+                    </div>
+                </div>
+                <div class="content thongtin">
+                    <div class="row">
+                        <div class="col-lg-12 form row">
+                            <form id="formpay" class="col-lg-6"
+                                action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSegYK-s6ZDorj2bcS3AMZsQL0XhMQ818_xMG9BFKgHwhwA1mg/formResponse"
+                                method="post">
+                                <h1 style="font-size: 1.7em;text-align: center;color: var(--color-home);">Điền Thông tin
+                                </h1>
+                                <div class="card" id="section-0">
+                                    <div class="card-body muagoiclass">
+                                        <div class="form-group"><label>Họ và tên</label><input class="form-control"
+                                                name="name" type="text" required></div>
+                                        <div class="form-group"><label>Số điện thoại</label><input class="form-control"
+                                                name="phone" type="text" required></div>
+                                        <div class="form-group"><label>Email</label><input class="form-control"
+                                                name="email" type="text" required></div>
+                                        <div class="form-group"><label>Địa chỉ</label><input class="form-control"
+                                                name="address" type="text" required></div>
+                                        <div class="form-group" style="display: none;"><label>Tên
+                                                gói</label><input class="form-control nameds" name="goi" type="text"
+                                                value></div>
+                                    </div>
+                                </div>
+                                <div class="form-group d-none"><label for="page-history">Hidden Input</label><input
+                                        class="form-control" id="page-history" name="pageHistory" type="text" value="0">
+                                </div>
+                            </form>
+                            <div class="imgds col-lg-6">
+                                <img src="photo/customization-right-9e01735d.png">
+                            </div>
+                        </div>
+                        <div class="thongtin-bottom">
+                            <div class="border-top"></div>
+                            <div class="thongtin-contact">
+                                <div class="button">
+                                    <button class="out">Thoát</button>
+                                    <button class="nextt" style="margin-left: 20px;">Tiếp theo</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="content pay">
+                    <div>
+                        <h1>Quét mã QR để thanh toán
+                        </h1>
+                        <!-- <img id="payqr" src="photo/Screenshot 2024-02-06 194036.png" alt=""> -->
+                        <div id="payqr"></div>
+                        <h2><span>Account name: </span><span id="payAccountName">***</span></h2>
+                        <h2><span>Account number: </span><span id="payAccountNumber">************</span></h2>
+                        <h2><span>Price: </span><span id="payAmount">***</span></h2>
+                        <h2><a target="_blank" id="payUrl">Hoặc click vào đây để đến trang thanh toán</a></h2>
+                        <div class="thongtin-bottom">
+                            <div class="border-top"></div>
+                            <div class="thongtin-contact">
+                                <div class="button">
+                                    <button class="back">Quay lại</button>
+                                    <button class="suc" id="checkpay78" style="margin-left: 20px;">Kiểm tra thanh
+                                        toán</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="content pay success">
+                    <div>
+                        <h1>Thanh toán thành công</h1>
+                        <img id="payqr" style="width: 256px;" src="photo/success.png" alt="">
+                        <h2>Thông tin đã được gửi đến địa chỉ email của bạn.</h2>
+                        <h2>Trường hợp không tìm thấy trong hộp thư đến, bạn vui lòng liên hệ với chúng tôi để được trợ
+                            giúp nhé.</h2>
+                        <br>
+                        <div class="thongtin-bottom">
+                            <div class="border-top"></div>
+                            <div class="thongtin-contact">
+                                <div class="button">
+                                    <button class="suc" style="margin: 0 auto;">Đóng</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="c661412b2-background_click" style="display: none;"></div>
+    <div class="c661412b2-iframe_click" style="display: none;"></div>
+    <main class="main-wrap">
+        <section id="header1412a2">
+            <div class="header1412a2">
+                <div class="header1412a2-wrap">
+                    <div class="header1412a2-logo">
+                        <img src="./photo/Logo.png">
+                    </div>
+                    <div class="header1412a2-nav">
+                        <a href="">Trang chủ</a>
+                        <a href="">Khóa học</a>
+                        <a href="">Kiểm tra đầu vào</a>
+                        <a href="">Blog</a>
+                        <div class="line"></div>
+                        <div style="visibility: hidden;" class="header1412a2-nav-mb">
+                            <i class="bi bi-list openmenu"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="header1412a2-nav-mb-wrap" style="transform: translateX(100%)">
+                    <h1>
+                        <i class="bi bi-x-circle clostmenu"></i>
+                        <img src="./photo/Logo.png">
+                    </h1>
+                    <a href="">Trang chủ</a>
+                    <a href="">Khóa học</a>
+                    <a href="">Kiểm tra đầu vào</a>
+                    <a href="">Blog</a>
+                </div>
+                <div class="bg" style="display: none;"></div>
+            </div>
+        </section>
+        <div class="main" style="height: max-content;width: 100%">
+            <section id="video1412a1">
+                <div class="video1412a1-video" style="overflow: hidden;">
+                    <video autoplay loop width="100%" height="600px" style="object-position: top;padding-top: 90px;"
+                        playsinline muted style="height: 600px !important;object-fit:cover;object-position:center;overflow-clip-margin: content-box;
+            overflow: clip;" ;>
+                        <source src="./photo/promotional video (không logo).mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="video1412a1-content">
+                    <h1>IELTS Hacker - Tự học IELTS cùng AI</h1>
+                </div>
+            </section>
+            <section id="wrapsection1">
+                <section id="intro1412b1">
+                    <div class="intro1412b1">
+                        <div class="row intro1412b1-content">
+                            <div class="col-lg-5 intro1412b1-items_content">
+                                <div class="intro1412b1-befor"></div>
+                                <div class="intro1412b1-text">
+                                    <h4>
+                                        <p>Khóa học</p>Ielts Hacker
+                                    </h4>
+                                    <h2>IELTS HACKER</h2>
+                                    <p>
+                                        Để đáp ứng nhu cầu ngày càng tăng về chất lượng IELTS và các kỳ thi năng lực
+                                        tiếng Anh khác, IELTS Hacker được tạo ra như một nền tảng học tập trực tuyến
+                                        toàn diện giúp giải quyết mọi vấn đề của người dùng.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-lg-7 intro1412b1-items_img">
+                                <div class="intro1412b1-after">
+                                    <div class="intro1412b1-img_wrap">
+                                        <div class="intro1412b1-img"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </section>
+            <section id="c661412b1">
+                <div class="c661412b1 container">
+                    <div class="row c661412b1-wrap">
+                        <div class="col-lg-6 c661412b1-left">
+                            <h2 style="text-transform: uppercase;">Ứng dụng IELTS Hacker</h2>
+                            <p style="margin: 20px 0;">
+                                IELTS Hacker hướng tới việc cung cấp trải nghiệm học tập phong phú, có tính
+                                tương tác cao, khiến việc học IELTS trở nên gần gũi, dễ tiếp cận. Nền tảng sẽ
+                                kết hợp nhiều tài nguyên đa phương tiện, bao gồm các bài thuyết trình bằng
+                                video, các hoạt động tương tác và hệ thống phản hồi được hỗ trợ bởi AI.
+                            </p>
+                            <div class="c661412b1-button" style="display: flex;gap: 10px;color: white;">
+                                <a class="popup_button" id="tienganhcoban" index="Foundation">Tiếng Anh căn bản</a>
+                                <a class="popup_button" id="ielts" index="Intermediate">IELTS</a>
+                            </div>
+                            <p style="color: var(--color-home);">Learn endlessly, create boundlessly, care inclusively.
+                            </p>
+                        </div>
+                        <div class="col-lg-6 c661412b1-right">
+                            <img id="c661412b1-img1"
+                                style="border-radius: 5px;box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;"
+                                src="./photo/z5408023013594_e80538817e6511b260f50bcdecbd1e51.jpg">
+                            <img id="c661412b1-img2"
+                                style="border-radius: 5px;box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;"
+                                src="./photo/z5402583766826_952c01219ed21a854393a0bb68bf6d56.jpg">
+                        </div>
+                    </div>
+                </div>
+                <div class="c661412b1-background_click" style="display: none;"></div>
+                <div class="c661412b1-iframe_click" style="display: none;">
+                </div>
+            </section>
+            <section id="wrapsection2">
+                <div class="wrapsection2">
+                    <section id="c661412l1">
+                        <div class="c661412l1">
+                            <div class="c661412l1-wrap container">
+                                <p style="text-transform: uppercase;">- Ielts Hacker -</p>
+                                <h1>ĐẶC QUYỀN TRONG THỜI GIAN ĐĂNG KÝ TRẢI NGHIỆM</h1>
+                                <div class="row re">
+                                    <div class="col-lg-7 c661412l1-img">
+                                        <img style="transform: rotate(0deg);object-position: right;"
+                                            src="./photo/Screenshot 2024-05-02 185449.png">
+                                    </div>
+                                    <div class="col-lg-5 c661412l1-content">
+                                        <div>
+                                            <h1 style="text-transform: uppercase;">Tài Liệu Học Tập</h1>
+                                            <p>Người dùng có thể khám phá và truy cập vào một kho tài liệu đa phương
+                                                tiện đa dạng, bao gồm không chỉ video bài giảng mà còn các hoạt động
+                                                luyện tập, tài liệu phụ trợ và nhiều nội dung hấp dẫn khác.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="use-case-tech-content" aria-hidden="true" class="css-e3i5rw">
+                                    <div class="css-1ddi76j" style="display: flex;justify-content: center;"><svg
+                                            width="700" height="300" viewBox="0 0 700 300" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <defs>
+                                                <linearGradient id="MyGradient">
+                                                    <stop offset="0%" stop-color="#06377b"></stop>
+                                                    <stop offset="100%" stop-color="#991f22"></stop>
+                                                </linearGradient>
+                                            </defs>
+                                            <path d="M0,0 Q50,200 345,204 T690,408" stroke="url(#MyGradient)"
+                                                stroke-width="5" stroke-linejoin="round" stroke-linecap="round"
+                                                stroke-dasharray="20 20">
+                                            </path>
+                                            <path d="M690,408Q640,208 345,204Q50,200 0,0" stroke="url(#line1-gradient)"
+                                                stroke-width="5" stroke-linejoin="round" stroke-linecap="round"
+                                                pathLength="1" stroke-dashoffset="0px" stroke-dasharray="0px 1px">
+                                            </path>
+                                        </svg></div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-5 c661412l1-content" style="justify-content: end;">
+                                        <div>
+                                            <h1 style="text-transform: uppercase;">Giáo Viên AI</h1>
+                                            <p>Bạn có thể trải nghiệm một trình giáo viên ảo thông minh đầy đủ chức
+                                                năng, giống như một giáo viên IELTS thực sự, với khả năng cung cấp phản
+                                                hồi chuyên sâu về bài viết của bạn và cách phát âm. Đây là một trải
+                                                nghiệm học tập tiên tiến, nơi bạn có thể nhận được sự hướng dẫn
+                                                và tinh chỉnh kỹ năng ngôn ngữ của mình.</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-7 c661412l1-img er">
+                                        <img style="transform: rotate(0deg)"
+                                            src="https://monkeymedia.vcdn.com.vn/upload/web/img/phan-mem-luyen-noi-tieng-anh-voi-nguoi-ao-10.jpg">
+                                    </div>
+                                </div>
+                                <div id="use-case-education" aria-hidden="true" style="transform: scaleX(-1)">
+                                    <div style="display: flex;justify-content: center;"><svg width="700" height="300"
+                                            viewBox="0 0 700 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M0,0 Q50,200 345,204 T690,408" stroke="url(#MyGradientd)"
+                                                stroke-width="5" stroke-linejoin="round" stroke-linecap="round"
+                                                stroke-dasharray="20 20">
+                                            </path>
+                                            <path d="M690,408Q640,208 345,204Q50,200 0,0" stroke="white"
+                                                stroke-width="5" stroke-linejoin="round" stroke-linecap="round"
+                                                pathLength="1" stroke-dashoffset="0px" stroke-dasharray="0px 1px">
+                                            </path>
+                                            <defs>
+                                                <linearGradient id="MyGradientd">
+                                                    <stop offset="0%" stop-color="#991f22"></stop>
+                                                    <stop offset="100%" stop-color="#06377b"></stop>
+                                                </linearGradient>
+                                            </defs>
+                                        </svg></div>
+                                </div>
+                                <div class="row re">
+                                    <div class="col-lg-7 c661412l1-img ed">
+                                        <img style="transform: rotate(0deg)"
+                                            src="https://lh3.googleusercontent.com/d/1Z2W0tFReN65jeAHNgt7aNesiA0GiLeHj">
+                                    </div>
+                                    <div class="col-lg-5 c661412l1-content">
+                                        <div>
+                                            <h1 style="text-transform: uppercase;">Tham Gia Học Trực Tiếp</h1>
+                                            <p>Bạn sẽ được tham gia vào các lớp học trực tuyến. Điều này mang lại một
+                                                trải nghiệm học tập toàn
+                                                diện hơn, cho phép bạn tương tác trực tiếp với một giáo viên chuyên
+                                                nghiệp, có thể ngay lập tức giúp bạn sửa lỗi ngữ pháp, cải thiện phản xạ
+                                                ngôn ngữ.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section id="libo1412a1">
+                        <div class="libo1412a1 container">
+                            <div class="libo1412a1-title">
+                                <h1>Đăng ký với các gói ngay để nhận được ưu đãi</h1>
+                            </div>
+                            <div class="libo1412a1-box row">
+                                <div class="col-lg-3 col-md-4 ">
+                                    <div class="libo1412a1-box_content">
+                                        <h2>Gói Basic</h2>
+                                        <h1><span>12$</span>/tháng</h1>
+                                        <div>
+                                            <p><i class="bi bi-check-circle-fill"></i> E-Books</p>
+                                            <p><i class="bi bi-check-circle-fill"></i> Videos học thuật</p>
+                                            <p><i class="bi bi-check-circle-fill"></i> Bài tập thực hành</p>
+                                            <p><i class="bi bi-check-circle-fill"></i> Hệ thống đánh giá bằng AI</p>
+                                        </div>
+                                        <a class="payclick" index="0">Mua ngay</a>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-4">
+                                    <div class="libo1412a1-box_content">
+                                        <h2>Gói Plus</h2>
+                                        <h1><span>58$</span>/tháng</h1>
+                                        <div>
+                                            <p><i class="bi bi-check-circle-fill"></i> E-Books</p>
+                                            <p><i class="bi bi-check-circle-fill"></i> Videos học thuật</p>
+                                            <p><i class="bi bi-check-circle-fill"></i> Bài tập thực hành</p>
+                                            <p><i class="bi bi-check-circle-fill"></i> Hệ thống đánh giá bằng AI</p>
+                                            <p><i class="bi bi-check-circle-fill"></i> Hệ thống đánh giá bằng AI + 2
+                                                buổi học online với giáo viên / tuần</p>
+                                        </div>
+                                        <a class="payclick" index="1">Mua ngay</a>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-4">
+                                    <div class="libo1412a1-box_content">
+                                        <h2>Gói Pro</h2>
+                                        <h1><span>86$</span>/tháng</h1>
+                                        <div>
+                                            <p><i class="bi bi-check-circle-fill"></i> E-Books</p>
+                                            <p><i class="bi bi-check-circle-fill"></i> Videos học thuật</p>
+                                            <p><i class="bi bi-check-circle-fill"></i> Bài tập thực hành</p>
+                                            <p><i class="bi bi-check-circle-fill"></i> Hệ thống đánh giá bằng AI</p>
+                                            <p><i class="bi bi-check-circle-fill"></i> Hệ thống đánh giá bằng AI + 6
+                                                buổi học online với giáo viên / tuần</p>
+                                        </div>
+                                        <a class="payclick" index="2">Mua ngay</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section id="c661412b2">
+                        <div class="c661412b2 container" id="dk">
+                            <div class="row c661412b2-wrap">
+                                <div class="col-lg-6 c661412b2-left">
+                                    <div class="c661412b2-contents">
+                                        <div class="c661412b2-items-wrap">
+                                            <h1>Đăng ký học thử ngay</h1>
+                                            <p>Những trường bắt buộc được đánh dấu*</p>
+                                            <form id="dkform">
+                                                <div class="card" id="section-0">
+                                                    <div class="card-body">
+                                                        <div class="form-group"><label for="entry.214186861">Họ và
+                                                                tên <span>*</span></label><input class="form-control"
+                                                                id="entry.214186861" name="name" type="text" required>
+                                                        </div>
+                                                        <div class="form-group"><label for="entry.1144448489">Số điện
+                                                                thoại <span>*</span></label><input class="form-control"
+                                                                id="entry.1144448489" name="phone" type="text" required>
+                                                        </div>
+                                                        <div class="form-group"><label for="entry.178791406">Email
+                                                                <span>*</span></label><input class="form-control"
+                                                                id="entry.178791406" name="email" type="text" required>
+                                                        </div>
+                                                        <div class="form-group"><label for="entry.871869972">Khu vực
+                                                                sinh sống <span>*</span></label><input
+                                                                class="form-control" id="entry.871869972" name="address"
+                                                                type="text" required>
+                                                        </div><input class="btn btn-vam dssdad"
+                                                            value="Gửi thông tin đăng ký">
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                    <div class="c661412b2-posi-ab">
+                                        <div class="c661412b2-posi-ab_bg"></div>
+                                        <img class="c661412b2-posi-ab_img"
+                                            src="https://vcdn-vnexpress.vnecdn.net/2019/12/25/English-4093-1577240389.jpg">
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 c661412b2-right">
+                                    <div class="c661412b2-posi-ab">
+                                        <img src="https://vcdn-vnexpress.vnecdn.net/2019/12/25/English-4093-1577240389.jpg"
+                                            alt="">
+                                        <div class="c661412b2-posi-ab_bg"></div>
+                                    </div>
+                                    <div class="c661412b2-video">
+                                        <i id="c661412b2-iframe_click" class="bi bi-play-circle-fill"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="c661412b2-background_click" style="display: none;"></div>
+                        <div class="c661412b2-iframe_click" style="display: none;">
+
+                        </div>
+                    </section>
+                </div>
+
+                <section id="footer6x41412a1" style="padding-top: 50px;">
+                    <section id="fttop1412a1">
+                        <div class="fttop1412a1">
+                            <div class="fttop1412a1-wrap container">
+                                <h1>IELTS Hacker<br>
+                                    Học IELTS hiệu quả hơn cùng AI</h1>
+                            </div>
+                        </div>
+                    </section>
+                    <div class="footer6x41412a1 container">
+                        <div class="row">
+                            <div class="col-lg-4"><img class="imgfooter"
+                                    src="https://dsseducation.com/wp-content/uploads/2023/12/Logo_DSS_GROUP-1-300x300.png"
+                                    class="image wp-image-5192  attachment-medium size-medium" alt=""
+                                    style="max-width: 100%; height: auto;"
+                                    srcset="https://dsseducation.com/wp-content/uploads/2023/12/Logo_DSS_GROUP-1-300x300.png 300w, https://dsseducation.com/wp-content/uploads/2023/12/Logo_DSS_GROUP-1-150x150.png 150w, https://dsseducation.com/wp-content/uploads/2023/12/Logo_DSS_GROUP-1-768x768.png 768w, https://dsseducation.com/wp-content/uploads/2023/12/Logo_DSS_GROUP-1-1536x1536.png 1536w, https://dsseducation.com/wp-content/uploads/2023/12/Logo_DSS_GROUP-1-2048x2048.png 2048w"
+                                    sizes="(max-width: 300px) 100vw, 300px" /></div>
+                            <div class="col-lg-4 footer6x41412a1-wrap">
+                                <div class="hidden-xs lien_he">
+                                    <div class="footer6x41412a1-title"><span>Văn Phòng Tại Hồ Chí Minh</span></div>
+                                    <div class="diachi"><i class="fa fa-home" aria-hidden="true"> </i><ins> Địa
+                                            chỉ:</ins> <span>VPĐD BỘ GIÁO DỤC & ĐÀO TẠO HCM, 3 Công Trường Quốc Tế, Q3,
+                                            HCM</span></div>
+                                    <div class="phone_tel"><i class="fa fa-phone"></i><ins> Điện thoại:</ins> <strong>
+                                            <a href="tel:+84904375413"><span> +84904375413 </span></a></strong></div>
+                                    <div class="email"><i class="fa fa-envelope"></i><ins> Email:</ins>
+                                        <span>info@dsseducation.com</span>
+                                    </div>
+                                    <div class="website"><i class="fa fa-globe"></i><ins> Website:</ins>
+                                        <span>dsseducation.com</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 footer6x41412a1-wrap">
+                                <div class="footer6x41412a1-title"><span>Dịch vụ &#038; Chính Sách</span></div>
+                                <div class="is-divider small"></div>
+                                <div class="menu-dich-vu-chinh-sach-container">
+                                    <ul id="menu-dich-vu-chinh-sach" class="menu">
+                                        <li id="menu-item-3061"
+                                            class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-3061">
+                                            <a href="https://dsseducation.com/category/dinh-cu/">Định cư</a>
+                                        </li>
+                                        <li id="menu-item-3062"
+                                            class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-3062">
+                                            <a href="https://dsseducation.com/category/hoc-bong/">Học bổng</a>
+                                        </li>
+                                        <li id="menu-item-3060"
+                                            class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-3060">
+                                            <a href="https://dsseducation.com/category/du-hoc/">Du Học</a>
+                                        </li>
+                                        <li id="menu-item-4443"
+                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-privacy-policy menu-item-4443">
+                                            <a href="https://dsseducation.com/chinh-sach-bao-mat/">CS bảo mật thông tin
+                                                khách hàng</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 footer6x41412a1-wrap">
+                                <div class="hidden-xs lien_he">
+                                    <div class="footer6x41412a1-title"><span>Văn phòng tại Sydney</span></div>
+                                    <div class="diachi"><i class="fa fa-home" aria-hidden="true"></i><ins> Địa chỉ:
+                                        </ins> <span>Level 26, 44 Market Street, Sydney, NSW 2000</span></div>
+                                    <div class="phone_tel"><i class="fa fa-phone"></i><ins> Điện thoại:</ins> <strong>
+                                            <a href="tel:(+61)291350099"><span> (+61)291350099 </span></a></strong>
+                                    </div>
+                                    <div class="email"><i class="fa fa-envelope"></i><ins> Email:</ins>
+                                        <span>team@dsseducation.com</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 footer6x41412a1-wrap">
+                                <div class="hidden-xs lien_he">
+                                    <div class="footer6x41412a1-title"><span>Văn phòng tại Hà Nội</span></div>
+                                    <div class="diachi"><i class="fa fa-home" aria-hidden="true"></i><ins> Địa chỉ:
+                                        </ins> <span>Tòa nhà Hội nhà báo Việt Nam, Dương Đình Nghệ, Cầu Giấy</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class=" col-lg-4 footer6x41412a1-wrap">
+                                <div class="hidden-xs lien_he">
+                                    <div class="footer6x41412a1-title"><span>Văn phòng tại Cần Thơ:</span></div>
+                                    <div class="diachi"><i class="fa fa-home" aria-hidden="true"></i><ins> Địa chỉ:
+                                        </ins> <span>Tầng 2, TRUNG TÂM DỊCH VỤ VIỆC LÀM THÀNH PHỐ CẦN THƠ Số 160, đường
+                                            30 tháng 4, phường An Phú, quận Ninh Kiều, TP. Cần Thơ</span></div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 footer6x41412a1-wrap">
+                                <div class="hidden-xs lien_he">
+                                    <div class="footer6x41412a1-title"><span>Văn phòng tại Vũng Tàu: </span></div>
+                                    <div class="diachi"><i class="fa fa-home" aria-hidden="true"></i><ins> Địa chỉ:
+                                        </ins> <span>Đoàn Trường THPT chuyên Lê Quý Đôn, Ba Tháng Hai, Phường 11, Thành
+                                            phố Vũng Tàu</span></div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 footer6x41412a1-wrap">
+                                <div class="hidden-xs lien_he">
+                                    <div class="footer6x41412a1-title"><span>Văn phòng tại Đà Nẵng</span></div>
+                                    <div class="diachi"><i class="fa fa-home" aria-hidden="true"></i><ins> Địa chỉ:
+                                        </ins> <span>Số 41 Lê Duẩn, phường Hải Châu 1, Quận Hải Châu, thành phố Đà
+                                            Nẵng</span></div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 footer6x41412a1-wrap">
+                                <div class="hidden-xs lien_he">
+                                    <div class="footer6x41412a1-title"><span>Văn phòng tại Đà Nẵng</span></div>
+                                    <div class="diachi"><i class="fa fa-home" aria-hidden="true"></i><ins> Địa chỉ:
+                                        </ins> <span>Tầng 5 Trung tâm DVVL Thanh Niên tỉnh Quảng Bình. 42 Trần Quang
+                                            Khải &#8211; T.P Đồng Hới &#8211; Tỉnh Quảng Bình</span></div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="ft-bottom">
+                        <div class="container">
+                            <p>Copyright 2024 © Dsseducation.com</p>
+                        </div>
+                    </div>
+                </section>
+
+            </section>
+        </div>
+    </main>
+    <!-- Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Slick -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="https://cdn.statically.io/gh/tr1nh/fetch-sheet.js/master/fetch-sheet.min.js"></script>
+    <!-- Main Js -->
+    <script src="Js/qrcode.min.js"></script>
+    <script src="Js/index.js"></script>
+    <script src="Js/loadcontent.js"></script>
+    <script src="Js/popup.js"></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,51 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    color: var(--text-color);
+}
+
+:root {
+    --background: #c0d6f7;
+    --rebackground: white;
+    --border: #dec7a0;
+    --lhu-color: #1565c0;
+    --lhu-hover: #ffa500;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+body {
+    font-size: 1.6rem;
+}
+
+
+.wrap {
+    width: 100%;
+    display: block;
+    box-sizing: inherit;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.ac {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ul {
+    list-style: none;
+    user-select: none;
+}
