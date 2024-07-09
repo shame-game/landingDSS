@@ -396,16 +396,14 @@ a {
 }
 
 .intro1412b1-img {
-    background-image: url(../photo/intro-home.png);
-    background-size: cover;
-    height: 1200px;
-    width: 120%;
-    animation: intro-home 18s linear infinite;
+    background-image: url(https://lh3.googleusercontent.com/d/1x37oyqtNXSLpVvym8fDysNkUjip8MGmN);
+    background-size: contain;
+    height: 1600px;
+    width: 100%;
+    animation: intro-home 15s linear infinite;
 }
 
-.intro1412b1-img_wrap {
-    transform: rotate(-10deg);
-}
+.intro1412b1-img_wrap {}
 
 @keyframes intro-home {
     from {
@@ -413,7 +411,7 @@ a {
     }
 
     to {
-        transform: translateY(-750px);
+        transform: translateY(-1400px);
     }
 }
 

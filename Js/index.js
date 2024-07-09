@@ -286,7 +286,7 @@ vam('.dssdad').onclick = () => {
 */
 const w = screen.width
 /* banner */
-
+/*
 vams('.navbanner-items').forEach((t, index) => {
     let img = vams('.banner-imgs')[index];
     let content = vams('.banner-contents')[index];
@@ -298,8 +298,9 @@ vams('.navbanner-items').forEach((t, index) => {
         vam('.navbanner-items.acction').classList.remove('acction')
         t.classList.add('acction')
     }
-})
+})*/
 // lùi banner
+/*
 vam('#prev').onclick = () => {
     let i = vam(`.navbanner-items.acction`).getAttribute('index')
     if (i == 1) {
@@ -323,8 +324,8 @@ vam('#prev').onclick = () => {
 vam('#next').onclick = () => {
     nex()
 }
-
-setInterval(nex, 4000)
+*/
+setInterval(nex, 3000)
 
 
 function nex() {
