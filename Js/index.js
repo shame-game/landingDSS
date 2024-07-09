@@ -3,7 +3,6 @@ const vams = document.querySelectorAll.bind(document);
 
 window.onload = () => {
     vam('.loadweb').remove();
-    vam('.video1412a1-content').setAttribute('style', 'animation: introwweb 3s linear forwards;')
 };
 
 vam('.openmenu').addEventListener('click', () => {
@@ -19,7 +18,7 @@ vam('.bg').addEventListener('click', () => {
     vam('.header1412a2-nav-mb-wrap').setAttribute('style', 'transform: translateX(100%)')
     vam('.bg').setAttribute('style', 'display:none')
 })
-
+/*
 vam('#c661412b2-iframe_click').addEventListener('click', () => {
     vam('.c661412b2-background_click').setAttribute('style', 'display:flex')
     vam('.c661412b2-iframe_click').setAttribute('style', 'display:flex')
@@ -50,7 +49,7 @@ overflow: clip;" ;>
         vam('.c661412b2-iframe_click').setAttribute('style', 'display:none')
         vam('.c661412b2-iframe').remove()
     })
-})
+})*/
 
 // vam('.c661412b1button-click').addEventListener('click', () => {
 //     vam('.c661412b1-background_click').setAttribute('style', 'display:flex')
@@ -67,7 +66,7 @@ overflow: clip;" ;>
 //         vam('.c661412b1-iframe').remove()
 //     })
 // })
-
+/*
 vam("#formpay").addEventListener("submit", event => {
     // prevent submit
     event.preventDefault();
@@ -84,7 +83,7 @@ vam("#formpay").addEventListener("submit", event => {
     fetch(URL + "?" + formData.toString(), {
         headers: {
             "Content-Type": "application/x-www-form-urlencoded",
-            "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8",
+            "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*;q=0.8",
         },
         method: "post"
     });
@@ -99,7 +98,7 @@ let qrcode = new QRCode("payqr", {
     width: 256,
     height: 256,
 });
-
+*/
 vams('.payclick').forEach((t) => {
     t.onclick = () => {
         let g = t.getAttribute('index')
@@ -220,7 +219,7 @@ vams('.payclick').forEach((t) => {
 vam('.bi-x').addEventListener('click', () => {
     vam('.tbsuc').setAttribute('style', 'transform:translateX(200%)')
 })
-
+/*
 vam('.dssdad').onclick = () => {
     let Name = vam('#dkform input[name="name"]').value
     let Email = vam('#dkform input[name="email"]').value
@@ -263,7 +262,7 @@ vam('.dssdad').onclick = () => {
                 vam("#section").setAttribute('style', 'display:none')
             }
 
-            /*
+            
             vam('.tbsuc h1').innerText = 'Đăng ký thành công'
             vam('.tbsuc p').innerText = 'Thông tin tài khoản đăng nhập đã được gửi đến email của bạn'
             if (vam('.bi-exclamation-circle-fill') != null) {
@@ -277,12 +276,100 @@ vam('.dssdad').onclick = () => {
             }, 5000);
             vam('.bi-x').addEventListener('click', () => {
                 vam('.tbsuc').setAttribute('style', 'transform:translateX(200%)')
-            })*/
+            })
         }
 
     }).catch(err => {
         alert('Lỗi')
     })
 }
+*/
+const w = screen.width
+/* banner */
+
+vams('.navbanner-items').forEach((t, index) => {
+    let img = vams('.banner-imgs')[index];
+    let content = vams('.banner-contents')[index];
+    t.onclick = () => {
+        vams('.banner-imgs').forEach((t) => t.classList.remove('acction'));
+        img.classList.add('acction')
+        vams('.banner-contents').forEach((t) => t.classList.remove('acction'));
+        content.classList.add('acction')
+        vam('.navbanner-items.acction').classList.remove('acction')
+        t.classList.add('acction')
+    }
+})
+// lùi banner
+vam('#prev').onclick = () => {
+    let i = vam(`.navbanner-items.acction`).getAttribute('index')
+    if (i == 1) {
+        vam(`.navbanner-items.acction`).classList.remove('acction');
+        vam(`.banner-contents.acction`).classList.remove('acction');
+        vam(`.banner-imgs.acction`).classList.remove('acction');
+        vam(`.navbanner-items[index="4"]`).classList.add('acction');
+        vam(`.banner-contents[index="4"]`).classList.add('acction');
+        vam(`.banner-imgs[index="4"]`).classList.add('acction');
+    }
+    else {
+        vam(`.navbanner-items.acction`).classList.remove('acction');
+        vam(`.banner-contents.acction`).classList.remove('acction');
+        vam(`.banner-imgs.acction`).classList.remove('acction');
+        vam(`.navbanner-items[index="${Number(i) - 1}"]`).classList.add('acction');
+        vam(`.banner-contents[index="${Number(i) - 1}"]`).classList.add('acction');
+        vam(`.banner-imgs[index="${Number(i) - 1}"]`).classList.add('acction');
+    }
+}
+// tiền banner
+vam('#next').onclick = () => {
+    nex()
+}
+
+setInterval(nex, 4000)
 
 
+function nex() {
+    let i = vam(`.navbanner-items.acction`).getAttribute('index')
+    if (i == 5) {
+        vam(`.navbanner-items.acction`).classList.remove('acction');
+        vam(`.banner-contents.acction`).classList.remove('acction');
+        vam(`.banner-imgs.acction`).classList.remove('acction');
+        vam(`.navbanner-items[index="1"]`).classList.add('acction');
+        vam(`.banner-contents[index="1"]`).classList.add('acction');
+        vam(`.banner-imgs[index="1"]`).classList.add('acction');
+    }
+    else {
+        vam(`.navbanner-items.acction`).classList.remove('acction');
+        vam(`.banner-contents.acction`).classList.remove('acction');
+        vam(`.banner-imgs.acction`).classList.remove('acction');
+        vam(`.navbanner-items[index="${Number(i) + 1}"]`).classList.add('acction');
+        vam(`.banner-contents[index="${Number(i) + 1}"]`).classList.add('acction');
+        vam(`.banner-imgs[index="${Number(i) + 1}"]`).classList.add('acction');
+    }
+}
+$('.slickone-main').slick({
+    autoplay: true,
+    dots: true,
+    infinite: true,
+    speed: 300,
+    slidesToShow: 3,
+    slidesToScroll: 3,
+    arrows: true,
+    autoplaySpeed: 1000,
+    pauseOnHover: false,
+    prevArrow: `<span class="prev"><svg style="transform: scale(-1);" xmlns="http://www.w3.org/2000/svg" height="48" viewBox="0 0 24 24" width="48">
+    <path fill="none" d="M0 0h24v24H0V0z"></path><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"></path></svg></span>`,
+    nextArrow: `<span class="next"><svg xmlns="http://www.w3.org/2000/svg" height="48" viewBox="0 0 24 24" width="48">
+    <path fill="none" d="M0 0h24v24H0V0z"></path><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"></path></svg></span></span>`,
+});
+
+vams('.cauhoi').forEach((t) => {
+    t.onclick = () => {
+        if (t.getAttribute('class') == 'cauhoi ac') {
+            vam(`.cautraloi[index="${t.getAttribute('index')}"]`).classList.remove('ac')
+            t.classList.remove('ac')
+        } else if (t.getAttribute('class') == 'cauhoi') {
+            vam(`.cautraloi[index="${t.getAttribute('index')}"]`).classList.add('ac')
+            t.classList.add('ac')
+        }
+    }
+})

@@ -84,7 +84,7 @@ fetchSheet
     })
 
   });
-
+/*
 vam('#tienganhcoban').onclick = () => {
   let f =
     `<div>
@@ -107,9 +107,9 @@ vam('#tienganhcoban').onclick = () => {
     vam('.popupmain').setAttribute('style', 'display:none')
   }
 }
+*/
 
-
-
+/*
 vam('#ielts').onclick = (t) => {
   let f =
     `<div>
@@ -132,7 +132,7 @@ vam('#ielts').onclick = (t) => {
     vam('.popupmain').setAttribute('style', 'display:none')
   }
 }
-
+*/
 $("#popuptuvan").click(function () {
 
 })
